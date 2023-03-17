@@ -1,0 +1,10 @@
+^C:\USERS\RAYIT\STUDIOPROJECTS\NEURON\WINDOWS\RUNNER\CMAKELISTS.TXT
+setlocal
+"D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/rayit/StudioProjects/neuron/windows -BC:/Users/rayit/StudioProjects/neuron/build/windows --check-stamp-file C:/Users/rayit/StudioProjects/neuron/build/windows/runner/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

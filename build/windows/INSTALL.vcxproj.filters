@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rayit\StudioProjects\neuron\build\windows\CMakeFiles\1ac1e7a9259a6a41a357794b7893ea45\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5BE9F841-6825-33FC-870C-89D84B3323D8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

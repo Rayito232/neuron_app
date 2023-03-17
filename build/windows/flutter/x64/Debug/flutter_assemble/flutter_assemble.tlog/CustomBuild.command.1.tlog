@@ -1,0 +1,28 @@
+^C:\USERS\RAYIT\STUDIOPROJECTS\NEURON\BUILD\WINDOWS\CMAKEFILES\CD73083D09B598E08084E094FA0E2E51\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\rayit\fvm\versions\3.7.1 PROJECT_DIR=C:\Users\rayit\StudioProjects\neuron FLUTTER_ROOT=C:\Users\rayit\fvm\versions\3.7.1 FLUTTER_EPHEMERAL_DIR=C:\Users\rayit\StudioProjects\neuron\windows\flutter\ephemeral PROJECT_DIR=C:\Users\rayit\StudioProjects\neuron FLUTTER_TARGET=C:\Users\rayit\StudioProjects\neuron\lib\main.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz10cnVl,RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\rayit\StudioProjects\neuron\.dart_tool\package_config.json C:/Users/rayit/fvm/versions/3.7.1/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RAYIT\STUDIOPROJECTS\NEURON\BUILD\WINDOWS\CMAKEFILES\A95C1A72F0E947F7FC2C7B794B904F47\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RAYIT\STUDIOPROJECTS\NEURON\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/rayit/StudioProjects/neuron/windows -BC:/Users/rayit/StudioProjects/neuron/build/windows --check-stamp-file C:/Users/rayit/StudioProjects/neuron/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

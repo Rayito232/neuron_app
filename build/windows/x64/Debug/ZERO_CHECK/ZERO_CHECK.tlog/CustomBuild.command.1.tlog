@@ -1,0 +1,10 @@
+^C:\USERS\RAYIT\STUDIOPROJECTS\NEURON\BUILD\WINDOWS\CMAKEFILES\1AC1E7A9259A6A41A357794B7893EA45\GENERATE.STAMP.RULE
+setlocal
+"D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/rayit/StudioProjects/neuron/windows -BC:/Users/rayit/StudioProjects/neuron/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/rayit/StudioProjects/neuron/build/windows/neuron.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
