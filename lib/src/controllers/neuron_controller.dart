@@ -88,15 +88,13 @@ class NeuronController extends GetxController {
       output = 1;
     }
     realOutput.value = output;
-    verifyOutput();
+    verifyOutput(output);
   }
 
-  verifyOutput() {
+  verifyOutput(double output) {
     if (realOutput != expectedOutput) {
-      training();
+      training(output);
       getOutput();
-    } else {
-      // clearWeights();
     }
   }
 
@@ -117,7 +115,7 @@ class NeuronController extends GetxController {
     w4TextController.clear();
   }
 
-  void training() {
+  void training(double output) {
     double firstWeight = (weight[0] +
         2 *
             learningPercentage.value *
@@ -142,7 +140,7 @@ class NeuronController extends GetxController {
             expectedOutput.value *
             double.parse(x4TextController.text));
     double error =
-        (errorPercentage.value + 2 * learningPercentage.value * (-1));
+        (errorPercentage.value + 2 * learningPercentage.value * output * (-1));
 
     weight.value = [firstWeight, secondWeight, thirdWeight, fourthWeight];
     errorPercentage.value = error;

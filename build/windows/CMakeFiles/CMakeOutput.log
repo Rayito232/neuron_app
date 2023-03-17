@@ -7,7 +7,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.4.0+18d5aef85 for .NET Framework
-Build started 3/17/2023 12:36:24 PM.
+Build started 3/17/2023 4:24:47 PM.
 Project "C:\Users\rayit\StudioProjects\neuron\build\windows\CMakeFiles\3.24.202208181-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -33,7 +33,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:05.27
+Time Elapsed 00:00:04.72
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -45,12 +45,12 @@ The CXX compiler identification is MSVC, found in "C:/Users/rayit/StudioProjects
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/rayit/StudioProjects/neuron/build/windows/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Programs/VS Code 2022/Shared/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5a22a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
+Run Build Command(s):D:/Programs/VS Code 2022/Shared/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c1c56.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31933 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5a22a.dir\Debug\\" /Fd"cmTC_5a22a.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.24\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_5a22a.vcxproj -> C:\Users\rayit\StudioProjects\neuron\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_5a22a.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c1c56.dir\Debug\\" /Fd"cmTC_c1c56.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\Programs\VS Code 2022\Shared\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.24\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_c1c56.vcxproj -> C:\Users\rayit\StudioProjects\neuron\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_c1c56.exe
 
 
 

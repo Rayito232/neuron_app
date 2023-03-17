@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/neuron.iml" filepath="$PROJECT_DIR$/neuron.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/neuron.iml" filepath="$PROJECT_DIR$/.idea/neuron.iml" />
       <module fileurl="file://$PROJECT_DIR$/android/neuron_android.iml" filepath="$PROJECT_DIR$/android/neuron_android.iml" />
     </modules>
   </component>
