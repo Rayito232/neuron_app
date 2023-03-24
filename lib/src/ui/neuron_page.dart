@@ -19,7 +19,8 @@ class NeuronPage extends StatelessWidget {
             onTap: () => FocusScope.of(context).unfocus(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: const [
+                /*
                 Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width * 0.5,
@@ -209,156 +210,23 @@ class NeuronPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Obx(
-                  () => Table(
-                    defaultColumnWidth: FixedColumnWidth(
-                        MediaQuery.of(context).size.width * 0.2),
-                    defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                    border: TableBorder.symmetric(
-                      inside: const BorderSide(width: 1, color: Colors.indigo),
-                      outside: const BorderSide(width: 1, color: Colors.indigo),
-                    ),
-                    children: [
-                      const TableRow(
-                        decoration: BoxDecoration(color: Colors.indigo),
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              "Inputs",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "Expected ouput",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                            ),
-                          ),
-                          Text(
-                            "Real output",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                      TableRow(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              "[ ${neuronController.x1TextController.text}, ${neuronController.x2TextController.text}, ${neuronController.x3TextController.text}, ${neuronController.x4TextController.text} ]",
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            neuronController.expectedOutput.toString(),
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 16),
-                          ),
-                          Text(
-                            neuronController.realOutput.toString(),
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Obx(
-                  () => Table(
-                    defaultColumnWidth: FixedColumnWidth(
-                        MediaQuery.of(context).size.width * 0.2),
-                    defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                    border: TableBorder.symmetric(
-                      inside: const BorderSide(width: 1, color: Colors.indigo),
-                      outside: const BorderSide(width: 1, color: Colors.indigo),
-                    ),
-                    children: [
-                      const TableRow(
-                        decoration: BoxDecoration(color: Colors.indigo),
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              "New weights",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "Iterations",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                            ),
-                          ),
-                          Text(
-                            "Error",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                      TableRow(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              "[ ${neuronController.weight[0].toStringAsFixed(3)}, ${neuronController.weight[1].toStringAsFixed(3)}, ${neuronController.weight[2].toStringAsFixed(3)}, ${neuronController.weight[3].toStringAsFixed(3)} ]",
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            neuronController.iterations.toString(),
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 16),
-                          ),
-                          Text(
-                            neuronController.errorPercentage.toStringAsFixed(3),
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                                color: Colors.black, fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+                */
+                TableDataWidget(index: 0),
+                TableDataWidget(index: 1),
+                TableDataWidget(index: 2),
+                TableDataWidget(index: 3),
+                TableDataWidget(index: 4),
+                TableDataWidget(index: 5),
+                TableDataWidget(index: 6),
+                TableDataWidget(index: 7),
+                TableDataWidget(index: 8),
+                TableDataWidget(index: 9),
+                TableDataWidget(index: 10),
+                TableDataWidget(index: 11),
+                TableDataWidget(index: 12),
+                TableDataWidget(index: 13),
+                TableDataWidget(index: 14),
+                TableDataWidget(index: 15),
               ],
             ),
           ),
@@ -367,5 +235,164 @@ class NeuronPage extends StatelessWidget {
           onPressed: () => neuronController.clearInputs(),
           child: const Icon(Icons.delete),
         ));
+  }
+}
+
+class TableDataWidget extends StatelessWidget {
+  final int index;
+  const TableDataWidget({Key? key, required this.index}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final NeuronController neuronController = Get.find();
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        children: [
+          Obx(
+            () => Table(
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              border: TableBorder.symmetric(
+                inside: const BorderSide(width: 1, color: Colors.indigo),
+                outside: const BorderSide(width: 1, color: Colors.indigo),
+              ),
+              children: [
+                const TableRow(
+                  decoration: BoxDecoration(color: Colors.indigo),
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "Inputs",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "Expected output",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      "Real output",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "[${neuronController.inputsArray[index][0]}, ${neuronController.inputsArray[index][1]}, ${neuronController.inputsArray[index][2]}, ${neuronController.inputsArray[index][3]}]",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      neuronController.expectedOutputList[index].toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.black, fontSize: 16),
+                    ),
+                    Text(
+                      neuronController.realOutputList[index].toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.black, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Obx(
+            () => Table(
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              border: TableBorder.symmetric(
+                inside: const BorderSide(width: 1, color: Colors.indigo),
+                outside: const BorderSide(width: 1, color: Colors.indigo),
+              ),
+              children: [
+                const TableRow(
+                  decoration: BoxDecoration(color: Colors.indigo),
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "New weights",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "Iterations",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      "Error",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "[${neuronController.newWeight[index][0].toStringAsFixed(3)}, ${neuronController.newWeight[index][1].toStringAsFixed(3)}, ${neuronController.newWeight[index][2].toStringAsFixed(3)}, ${neuronController.newWeight[index][3].toStringAsFixed(3)}]",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      neuronController.iterations[index].toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.black, fontSize: 16),
+                    ),
+                    Text(
+                      neuronController.errorPercentageList[index].toStringAsFixed(3),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.black, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
