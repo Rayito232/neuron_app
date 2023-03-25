@@ -13,8 +13,8 @@ class NeuronController extends GetxController {
   final TextEditingController x3TextController = TextEditingController();
   final TextEditingController x4TextController = TextEditingController();
 
-  RxList weight = [].obs;
-  RxList newWeight = [].obs;
+  RxList initialWeights = [].obs;
+  RxList weights = [].obs;
   RxList inputs = [].obs;
   RxList inputsArray = [].obs;
 
@@ -100,16 +100,16 @@ class NeuronController extends GetxController {
     print("w2 = ${randomWeights[1]}");
     print("w3 = ${randomWeights[2]}");
     print("w4 = ${randomWeights[3]}");
-    weight.value = randomWeights;
+    initialWeights.value = randomWeights;
     for (var i = 0; i < 16; i++) {
-      newWeight.add(weight);
+      weights.add(initialWeights);
     }
-    print(newWeight);
+    print(weights);
   }
 
   calculate() {
     getExpectedOutput();
-    getOutput();
+    //getOutput();
   }
 
   void getExpectedOutput() {
@@ -144,10 +144,10 @@ class NeuronController extends GetxController {
     double output = -1;
     List errorList = errorPercentageList;
     for (var element in inputsArray) {
-      var x1 = (weight[0] * element[0]);
-      var x2 = (weight[1] * element[1]);
-      var x3 = (weight[2] * element[2]);
-      var x4 = (weight[3] * element[3]);
+      var x1 = (initialWeights[0] * element[0]);
+      var x2 = (initialWeights[1] * element[1]);
+      var x3 = (initialWeights[2] * element[2]);
+      var x4 = (initialWeights[3] * element[3]);
       output = tanh(x1 + x2 + x3 + x4 - errorList[0]);
       if (output < 0) {
         realOutputList.add(-1);
@@ -161,13 +161,11 @@ class NeuronController extends GetxController {
 
   verifyOutput(double output, var element, index) {
     while (finalList.length != expectedOutputList.length) {
-      for (int i = 0; i < realOutputList.length; i++) {
-        if (realOutputList[i] != expectedOutputList[i]) {
-          training(output, element, index);
-          getOutput();
-        } else {
-          finalList.add(realOutputList[i]);
-        }
+      if (realOutputList[index] != expectedOutputList[index]) {
+        training(output, element, index);
+        getOutput();
+      } else {
+        finalList.add(realOutputList[index]);
       }
     }
   }
@@ -191,27 +189,22 @@ class NeuronController extends GetxController {
   }
 
   void training(double output, var element, int index) {
-    double firstWeight = (newWeight[index][0] +
+    double firstWeight = (weights[index][0] +
         2 * learningPercentage.value * output * element[0]);
 
-    double secondWeight = (newWeight[index][1] +
+    double secondWeight = (weights[index][1] +
         2 * learningPercentage.value * output * element[1]);
 
-    double thirdWeight = (newWeight[index][2] +
+    double thirdWeight = (weights[index][2] +
         2 * learningPercentage.value * output * element[2]);
 
-    double fourthWeight = (newWeight[index][3] +
+    double fourthWeight = (weights[index][3] +
         2 * learningPercentage.value * output * element[3]);
 
     double error = (errorPercentageList[index] +
         2 * learningPercentage.value * output * (-1));
 
-    newWeight[index] = [
-      firstWeight,
-      secondWeight,
-      thirdWeight,
-      fourthWeight
-    ];
+    weights[index] = [firstWeight, secondWeight, thirdWeight, fourthWeight];
     errorPercentageList[index] = error;
     iterations[index] += 1;
   }

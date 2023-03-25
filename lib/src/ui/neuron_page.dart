@@ -368,7 +368,7 @@ class TableDataWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
-                        "[${neuronController.newWeight[index][0].toStringAsFixed(3)}, ${neuronController.newWeight[index][1].toStringAsFixed(3)}, ${neuronController.newWeight[index][2].toStringAsFixed(3)}, ${neuronController.newWeight[index][3].toStringAsFixed(3)}]",
+                        "[${neuronController.weights[index][0].toStringAsFixed(3)}, ${neuronController.weights[index][1].toStringAsFixed(3)}, ${neuronController.weights[index][2].toStringAsFixed(3)}, ${neuronController.weights[index][3].toStringAsFixed(3)}]",
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: Colors.black,

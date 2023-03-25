@@ -12,7 +12,6 @@
     <list default="true" id="e61724a8-cf0c-405b-a47c-70c9674e38d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/controllers/neuron_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/controllers/neuron_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/ui/neuron_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ui/neuron_page.dart" afterDir="false" />
     </list>
@@ -29,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -82,9 +86,8 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="FlutterRunConfigurationType">
-        <watch expression="weight[0]" />
-        <watch expression="weight[1]" />
-        <watch expression="secondWeight" />
+        <watch expression="realOutputList[index]" />
+        <watch expression="expectedOutputList[index]" />
       </configuration>
     </watches-manager>
   </component>
