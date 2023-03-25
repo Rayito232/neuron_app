@@ -73,39 +73,6 @@ class NeuronPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: TextField(
-                        controller: neuronController.x3TextController,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          label: Text(
-                            "x3",
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: TextField(
-                        controller: neuronController.x4TextController,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          label: Text(
-                            "x4",
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                  ],
-                ),
                 Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width * 0.5,
@@ -159,39 +126,6 @@ class NeuronPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: TextField(
-                        controller: neuronController.w3TextController,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          label: Text(
-                            "w3",
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: TextField(
-                        controller: neuronController.w4TextController,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          label: Text(
-                            "w4",
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                  ],
-                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: SizedBox(
@@ -259,7 +193,7 @@ class NeuronPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
-                              "[ ${neuronController.x1TextController.text}, ${neuronController.x2TextController.text}, ${neuronController.x3TextController.text}, ${neuronController.x4TextController.text} ]",
+                              "[ ${neuronController.x1TextController.text}, ${neuronController.x2TextController.text} ]",
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 color: Colors.black,
@@ -334,7 +268,7 @@ class NeuronPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: Text(
-                              "[ ${neuronController.weight[0].toStringAsFixed(3)}, ${neuronController.weight[1].toStringAsFixed(3)}, ${neuronController.weight[2].toStringAsFixed(3)}, ${neuronController.weight[3].toStringAsFixed(3)} ]",
+                              "[ ${neuronController.weight[0].toStringAsFixed(3)}, ${neuronController.weight[1].toStringAsFixed(3)} ]",
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 color: Colors.black,
