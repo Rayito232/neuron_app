@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:dart_numerics/dart_numerics.dart' as math;
+
 
 class NeuronController extends GetxController {
   final TextEditingController w1TextController = TextEditingController();
@@ -39,13 +41,13 @@ class NeuronController extends GetxController {
 
   calculate(BuildContext context) {
     FocusScope.of(context).unfocus();
-    weight.value = [
-      double.parse(w1TextController.text),
-      double.parse(w2TextController.text),
-    ];
     inputs.value = [
       double.parse(x1TextController.text),
       double.parse(x2TextController.text),
+    ];
+    weight.value = [
+      double.parse(w1TextController.text),
+      double.parse(w2TextController.text),
     ];
     getExpectedOutput();
     getOutput();
@@ -54,7 +56,7 @@ class NeuronController extends GetxController {
   void getExpectedOutput() {
     var firstInput = double.parse(x1TextController.text);
     var secondInput = double.parse(x1TextController.text);
-    if (firstInput > 0 && secondInput > 0) {
+    if (firstInput == 1 && secondInput == 1) {
       expectedOutput.value = 1;
     } else {
       expectedOutput.value = -1;
@@ -75,6 +77,7 @@ class NeuronController extends GetxController {
 
   void getOutput() {
     double output = 0;
+    double output2 = 0;
     double error = errorPercentage.value;
     var x1 = (weight[0] * double.parse(x1TextController.text));
     var x2 = (weight[1] * double.parse(x2TextController.text));
@@ -85,12 +88,16 @@ class NeuronController extends GetxController {
       output = 1;
     }
     realOutput.value = output;
-    verifyOutput(output);
+    verifyOutput();
   }
 
-  verifyOutput(double output) {
+  verifyOutput() {
+    if(iterations.value == 99){
+      print(realOutput);
+      print(expectedOutput);
+    }
     if (realOutput != expectedOutput) {
-      training(output);
+      training();
       getOutput();
     }
   }
@@ -106,24 +113,25 @@ class NeuronController extends GetxController {
     x2TextController.clear();
   }
 
-  void training(double output) {
+  void training() {
     double firstWeight = (weight[0] +
         2 *
             learningPercentage *
-            (output - expectedOutput.value) *
+            expectedOutput.value *
             double.parse(x1TextController.text));
 
     double secondWeight = (weight[1] +
         2 *
             learningPercentage *
-            (output - expectedOutput.value) *
+            expectedOutput.value *
             double.parse(x2TextController.text));
 
     double error = (errorPercentage.value +
-        2 * learningPercentage * (output - expectedOutput.value) * (-1));
+        2 * learningPercentage * expectedOutput.value * (-1));
 
     weight.value = [firstWeight, secondWeight];
     errorPercentage.value = error;
     iterations.value++;
+    print(iterations);
   }
 }

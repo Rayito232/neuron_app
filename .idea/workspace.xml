@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e61724a8-cf0c-405b-a47c-70c9674e38d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/99b7193e5780ef43d44d4fcdde4d275f/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/4d8103ef1db9c51b2f465c16db2a9b87/gen_dart_plugin_registrant.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/build/4d8103ef1db9c51b2f465c16db2a9b87/gen_dart_plugin_registrant.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.depend" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.depend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/install_manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/neuron.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/neuron.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/neuron.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/neuron.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/flutter_window.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/neuron.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/neuron.dir/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/controllers/neuron_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/controllers/neuron_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ui/neuron_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ui/neuron_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,15 +77,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/controllers/neuron_controller.dart</url>
-          <line>78</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="FlutterRunConfigurationType">
         <watch expression="realOutput" />
